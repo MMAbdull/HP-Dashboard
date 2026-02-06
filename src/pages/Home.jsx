@@ -10,7 +10,7 @@ function Home() {
             flex items-center      
             overflow-hidden
             pl-4
-            m-5
+            m-2
             w-50
             h-45
            bg-white
@@ -65,7 +65,7 @@ function Home() {
         flex items-center
         overflow-hidden
         pl-4
-        m-5
+        m-2
         w-50
         h-45
         bg-white
@@ -120,7 +120,7 @@ function Home() {
         flex items-center
         overflow-hidden
         pl-4
-        m-5
+        m-2
         w-50
         h-45
         bg-white
@@ -176,7 +176,7 @@ function Home() {
         flex items-center
         overflow-hidden
         pl-4
-        m-5
+        m-2
         w-50
         h-45
         bg-white
@@ -231,7 +231,7 @@ function Home() {
         flex items-center
         overflow-hidden
         pl-4
-        m-5
+        m-2
         w-50
         h-45
         bg-white
@@ -285,7 +285,7 @@ function Home() {
         flex items-center
         overflow-hidden
         pl-4
-        m-5
+        m-2
         w-50
         h-45
         bg-white
@@ -337,7 +337,7 @@ function Home() {
             <div className="
           relative
           pl-4
-          m-5
+          m-2
           w-10
           h-10
           bg-white
@@ -459,278 +459,278 @@ function Home() {
             Weekly Plan
           </h2>
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60">
+          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60 transition-all duration-200 hover:bg-blue-400/10 ">
             <div className="min-w-23">
               <p className="text-white text-lg font-semibold">Sun</p>
-              <p className="text-white/40 text-xs">Feb 2</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-blue-500 ">Feb 2</p>
             </div>
 
             <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
-              <p className="text-white/40 text-sm">Rest Day</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-500">Rest Day</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/30 text-sm">Full recovery & sleep</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/30 text-sm transition-all duration-200 group-hover:text-blue-500">Full recovery & sleep</p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
-              <p className="text-white/40 text-sm">—</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-500">—</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4">
+          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-[#aadd00]/5">
             <div className="min-w-23">
               <p className="text-white text-lg font-semibold">Mon</p>
-              <p className="text-white/40 text-xs">Feb 3</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-[#aadd00]">Feb 3</p>
             </div>
 
             <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
               <p className="text-[#aadd00] text-sm font-medium">Upper Body</p>
             </div>
 
             <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase">Muscles</p>
-              <p className="text-white text-sm">Chest & Triceps</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">Chest & Triceps</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Exercises</p>
-              <p className="text-white text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-[#aadd00]">
                 Bench Press • Incline DB • Cable Fly
               </p>
             </div>
 
             <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase">Sets</p>
-              <p className="text-white text-sm">4 × 10</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">4 × 10</p>
             </div>
 
             <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase">ET</p>
-              <p className="text-white text-sm">45m</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">45m</p>
             </div>
 
             <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/50 text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-[#aadd00]">
                 Controlled tempo
               </p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
               <p className="text-[#aadd00] text-sm font-medium">Completed</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4">
+          <div className=" group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-yellow-400/10">
             <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Tue</p>
-              <p className="text-white/40 text-xs">Feb 4</p>
+              <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Tue</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-yellow-400">Feb 4</p>
             </div>
 
             <div className="min-w-23">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium">Lower Body</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">Lower Body</p>
             </div>
 
             <div className="min-w-23">
-              <p className="text-white/40 text-xs uppercase">Muscles</p>
-              <p className="text-white text-sm">Quads & Glutes</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">Quads & Glutes</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Exercises</p>
-              <p className="text-white text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
                 Squats • Leg Press • Lunges
               </p>
             </div>
 
             <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase">Sets</p>
-              <p className="text-white text-sm">5 × 8</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">5 × 8</p>
             </div>
 
             <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase">ET</p>
-              <p className="text-white text-sm">50m</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">50m</p>
             </div>
 
             <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/50 text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
                 Focus on depth
               </p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
-              <p className="text-yellow-400 text-sm font-medium">In Progress</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+              <p className="text-yellow-400 text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">In Progress</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4">
+          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-red-500/10">
             <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Wed</p>
-              <p className="text-white/40 text-xs">Feb 5</p>
+              <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Wed</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-red-600">Feb 5</p>
             </div>
 
             <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium">Cardio</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-red-600">Cardio</p>
             </div>
 
             <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase">Muscles</p>
-              <p className="text-white text-sm">Full Body</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">Full Body</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Exercises</p>
-              <p className="text-white text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-red-600">
                 Treadmill • Cycling • Jump Rope
               </p>
             </div>
 
             <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase">Sets</p>
-              <p className="text-white text-sm">—</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Distance</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">—</p>
             </div>
 
             <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase">ET</p>
-              <p className="text-white text-sm">30m</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">30m</p>
             </div>
 
             <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/50 text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-red-600">
                 Moderate intensity
               </p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
-              <p className="text-white/50 text-sm font-medium">Not Started</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+              <p className="text-white/50 text-sm font-medium transition-all duration-200 group-hover:text-red-600">Not Started</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60">
+          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60 transition-all duration-200 hover:bg-blue-400/10">
             <div className="min-w-23">
               <p className="text-white text-lg font-semibold">Thu</p>
-              <p className="text-white/40 text-xs">Feb 6</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-blue-400">Feb 6</p>
             </div>
 
             <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
-              <p className="text-white/40 text-sm">Rest Day</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-400">Rest Day</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/30 text-sm">Mobility & stretching</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/30 text-sm transition-all duration-200 group-hover:text-blue-400">Mobility & stretching</p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
-              <p className="text-white/40 text-sm">—</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-400">—</p>
             </div>
           </div>
 
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4">
+          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-red-500/10">
             <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Fri</p>
-              <p className="text-white/40 text-xs">Feb 7</p>
+              <p className="text-white text-lg font-semibold ">Fri</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-red-500">Feb 7</p>
             </div>
 
             <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium">Core</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-red-500">Core</p>
             </div>
 
             <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase">Muscles</p>
-              <p className="text-white text-sm">Abs & Lower Back</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">Abs & Lower Back</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Exercises</p>
-              <p className="text-white text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-red-500">
                 Plank • Hanging Raises • Russian Twist
               </p>
             </div>
 
             <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase">Sets</p>
-              <p className="text-white text-sm">4 × 15</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">4 × 15</p>
             </div>
 
             <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase">ET</p>
-              <p className="text-white text-sm">30m</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">30m</p>
             </div>
 
             <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/50 text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-red-500">
                 Slow & controlled
               </p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
-              <p className="text-white/50 text-sm font-medium">Not Started</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+              <p className="text-white/50 text-sm font-medium transition-all duration-200 group-hover:text-red-500">Not Started</p>
             </div>
           </div>
 
 
-          <div className="flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4">
+          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4  transition-all duration-200 hover:bg-yellow-400/10">
             <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Sat</p>
-              <p className="text-white/40 text-xs">Feb 8</p>
+              <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Sat</p>
+              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-yellow-400">Feb 8</p>
             </div>
 
             <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium">Swimming</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">Swimming</p>
             </div>
 
             <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase">Muscles</p>
-              <p className="text-white text-sm">Full Body</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">Full Body</p>
             </div>
 
             <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase">Exercises</p>
-              <p className="text-white text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
                 Freestyle • Backstroke
               </p>
             </div>
 
             <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase">Sets</p>
-              <p className="text-white text-sm">—</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Distance / Labs</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">80M • 4</p>
             </div>
 
             <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase">ET</p>
-              <p className="text-white text-sm">40m</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">30m</p>
             </div>
 
             <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase">Notes</p>
-              <p className="text-white/50 text-sm truncate">
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
                 Easy pace
               </p>
             </div>
 
             <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase">Status</p>
+              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
               <p className="text-yellow-400 text-sm font-medium">In Progress</p>
             </div>
           </div>
@@ -750,11 +750,17 @@ function Home() {
           </h2>
 
           <div className="
+            group
             flex items-center justify-between
             rounded-2xl
             bg-linear-to-r from-white/5 to-white/10
             px-6 py-5
             border border-white/10
+            transition-all duration-500
+            hover:bg-linear-to-r 
+            hover:from-white/5 
+            hover:to-white/20
+            hover:border-white
             ">
 
 
@@ -789,6 +795,7 @@ function Home() {
                 bg-[#aadd00]
                 text-black
                 font-bold
+                cursor-pointer
                 hover:scale-105
                 transition
                 ">
