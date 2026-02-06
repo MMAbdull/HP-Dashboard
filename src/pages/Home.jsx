@@ -1,6 +1,31 @@
+import { delay, easeIn, motion } from "framer-motion";
+
+
+
 function Home() {
+  const sectionVariants ={
+    hidden:{opacity:0,y:50},
+    visible:(i = 1) =>({
+      opacity:1,
+      y:0,
+      transition:{
+        delay:i*0.2,
+        duration:0.6,
+        ease:"easOut",
+      },
+
+    }),
+
+  };
   return (
     <main>
+      <motion.section 
+      custom={0}
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+      className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+      >
       <section className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
         <div className="flex flex-col gap-5 bg-gray-950 p-6 rounded-3xl">
           <h2 className="text-white text-3xl font-semibold mb-4">Workouts</h2>
@@ -351,7 +376,15 @@ function Home() {
           </div>
         </div>
       </section>
-
+      </motion.section>
+      
+      <motion.section 
+      custom={1}
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+      className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+      >
       <section className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
 
         <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
@@ -450,7 +483,15 @@ function Home() {
           </div>
         </div>
       </section>
+      </motion.section>
 
+      <motion.section 
+      custom={2}
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+      className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+      >
       <section className="mx-5 mt-10 mb-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
 
         <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
@@ -736,12 +777,17 @@ function Home() {
           </div>
 
         </div>
-
-
-
-
       </section>
+      </motion.section>
+     
 
+      <motion.section 
+      custom={3}
+      initial="hidden"
+      animate="visible"
+      variants={sectionVariants}
+      className="mx-5 mt-10 mb-16 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+      >
       <section className="mx-5 mt-10 mb-16 space-y-6 bg-gray-950 rounded-3xl min-h-100">
         <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
 
@@ -818,6 +864,7 @@ function Home() {
 
         </div>
       </section>
+      </motion.section>
 
       <section className="flex justify-center mb-10">
 
