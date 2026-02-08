@@ -1,3 +1,4 @@
+import { Routes,Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Analytics from "../pages/Analytics";
 import News from "../pages/News";
@@ -6,16 +7,18 @@ import Profile from "../pages/Profile";
 import Settings from "../pages/Settings";
 import Logout from "../pages/Logout";
 
-function Content({ activePage }) {
+function Content() {
   return (
     <main className="flex-1 bg-white overflow-y-auto ">
-      {activePage === "home" && <Home />}
-      {activePage === "analytics" && <Analytics />}
-      {activePage === "news" && <News />}
-      {activePage === "schedule" && <Schedule />}
-      {activePage === "profile" && <Profile />}
-      {activePage === "settings" && <Settings />}
-      {activePage === "logout" && <Logout />}
+      <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/analytics" element={<Analytics/>}/>
+      <Route path="/news" element={<News/>}/>
+      <Route path="/schedule" element={<Schedule/>}/>
+      <Route path="/profile" element={<Profile/>}/>
+      <Route path="/settings" element={<Settings/>}/>
+      <Route path="/logout" element={<Logout/>}/>
+      </Routes>
     </main>
   );
 }
