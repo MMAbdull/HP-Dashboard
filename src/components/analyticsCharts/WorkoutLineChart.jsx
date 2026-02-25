@@ -1,16 +1,6 @@
 import { LineChart, Line, XAxis,YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from "recharts";
 
-const data = [
-  {day:"Mon",workouts:2},
-  {day:"Tue",workouts:1},
-  {day:"Wed",workouts:2},
-  {day:"Thu",workouts:3},
-  {day:"Fri",workouts:4},
-  {day:"Sat",workouts:1},
-  {day:"Sun",workouts:2},
-]
-
-export default function WorkoutLineChart() {
+export default function WorkoutLineChart({ data }) {
   return(
     <ResponsiveContainer width="100%" height={250}>
       <LineChart data={data} margin={{top: 25,right: 20,bottom: 5,left: 0 }}>

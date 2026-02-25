@@ -1,17 +1,9 @@
 import { ComposedChart, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
-const data = [
-  { day: "Mon", workouts: 2, calories: 300 },
-  { day: "Tue", workouts: 1, calories: 450 },
-  { day: "Wed", workouts: 3, calories: 280 },
-  { day: "Thu", workouts: 2, calories: 500 },
-  { day: "Fri", workouts: 4, calories: 650 },
-  { day: "Sat", workouts: 1, calories: 400 },
-  { day: "Sun", workouts: 2, calories: 350 },
-]
 
-export default function WorkoutComposedChart() {
 
+export default function WorkoutComposedChart({ data }) {
+    console.log("workoutComposedChart", data);
   return (
     <ResponsiveContainer width="100%" height={250}>
       <ComposedChart data={data} margin={{top: 25, right: 20, bottom: -10, left:0}}>

@@ -1,14 +1,9 @@
 import { PieChart, Pie, Cell,Tooltip,ResponsiveContainer,Legend } from "recharts";
 
-const data = [
-  { name: "Strength", value: 5 },
-  { name: "Cardio", value: 3 },
-  { name: "Yoga", value: 2 },
-  { name: "HIIT", value: 4 },
-]
+
 const COLORS = ["#aadd00", "#00c49f", "#0088fe", "#ffbb28"];
 
-export default function WorkoutPieChart() {
+export default function WorkoutPieChart({ data }) {
   return (
     <ResponsiveContainer width="100%" height={250}>
       <PieChart>
@@ -16,8 +11,8 @@ export default function WorkoutPieChart() {
         <Legend/>
         <Pie
           data={data}
-          dataKey="value"
-          nameKey="name"
+          dataKey="count"
+          nameKey="type"
           cx="50%"
           cy="50%"
           outerRadius={80}

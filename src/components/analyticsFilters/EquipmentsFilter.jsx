@@ -4,10 +4,10 @@ export default function EquipmentFilter({ value, onChange }) {
 
   const equipment = [
     "Bodyweight",
-    "Dumbbells",
+    "Dumbbell",
     "Barbell",
     "Machines",
-    "Reststance Bands",
+    "Resistance Bands",
     "Kettlebells",
     "Medicine Ball",
     "TRX"
