@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { workoutsData } from "../components/analyticsData/data";
-import { filterWorkouts } from "../components/analyticsData/filters";
+import { filterWorkouts , filterByDateRange} from "../components/analyticsData/filters";
 import { transformWorkoutsByDay } from "../components/analyticsData/transformer";
 import { transformTrainingType } from "../components/analyticsData/transformer";
 import { transformCaloriesByDay } from "../components/analyticsData/transformer";
@@ -23,12 +23,13 @@ export default function Analytics() {
   const [muscleGroup, setMuscleGroup] = useState([]);
   const [equipment, setEquipment] = useState([]);
   
-  const filteredWorkouts = filterWorkouts(workoutsData, {
+  let filteredWorkouts = filterWorkouts(workoutsData, {
     trainingType,
     muscleGroup,
     equipment,
-    dataRange,
   });
+
+  filteredWorkouts = filterByDateRange(filteredWorkouts,dataRange)
 
    const lineChartData = transformWorkoutsByDay(filteredWorkouts);
    const CaloriesData = transformCaloriesByDay(filteredWorkouts);
