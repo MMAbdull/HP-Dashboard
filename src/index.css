@@ -56,6 +56,60 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
+.fc{
+  color: #030712;
+  font-weight: 600;
+}
+.fc-button{
+  background-color: #aadd00 !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease;
+}
+.fc-button-active {
+  background-color: #aadd00 !important;
+  color: #030712 !important;
+  border: none !important;
+}
+.fc-button:hover{
+  background-color: #030712 !important;
+}
+.fc-button:focus{
+  border: 2px solid #030712 !important;
+}
+
+.fc-dayGridMonth-view .fc-daygrid-day {
+  background-color: #030712;
+}
+.fc-dayGridMonth-view .fc-daygrid-day-number {
+  color: #aadd00;
+  font-weight: 600;
+}
+
+.fc-dayGridMonth-view .fc-col-header-cell-cushion {
+  font-weight: bold;
+}
+
+.fc-dayGridMonth-view .fc-daygrid-day-frame {
+  border: 1px solid white;
+  transition: all 0.2s ease;
+}
+.fc-dayGridMonth-view .fc-day-today {
+  background-color: #aadd00 !important;
+  transition: all 0.2s ease;
+}
+.fc-day-today .fc-daygrid-day-number {
+  color: white !important;
+}
+.fc-dayGridMonth-view .fc-daygrid-day:hover .fc-daygrid-day-number {
+  color: #030712 !important;
+}
+.fc-dayGridMonth-view .fc-daygrid-day:hover {
+  background-color: white !important;
+  cursor: pointer;
+}
+
 
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
