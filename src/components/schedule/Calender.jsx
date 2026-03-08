@@ -8,12 +8,40 @@ export default function Calendar() {
   const [events,setEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [showModel, setShowModel] = useState(false);
+  const [message,setMessage] = useState("");
 
   const handleDateClick = (info) => {
     setSelectedDate(info.dateStr);
     setShowModel(true);
   };
   const addEvent = (type) => {
+    const selectedDayEvents = events.filter(
+      (event) => event.date === selectedDate
+    );
+
+    const workoutsToday = selectedDayEvents.filter(
+      (event) => event.title.includes("Workout")
+    )
+
+    if(type === "workout" && workoutsToday.length >=6){
+      setMessage("Maximum 6 Workouts per day");
+      return;
+    }
+
+    const restToday = selectedDayEvents.find(
+      (event) => event.title.includes("Rest")
+    );
+
+    if(type === "workout" && restToday){
+    setMessage("You already scheduled a Rest day.");
+    return;
+    }
+
+    if(type === "rest" && selectedDayEvents.length > 0){
+      setMessage("You already scheduled workouts this day. NO REST");
+      return;
+    }
+
     const newEvent = {
       title: type === "workout" ? "Workout 💪 " : "Rest 💤",
       date: selectedDate,
@@ -22,6 +50,7 @@ export default function Calendar() {
     };
 
     setEvents([...events,newEvent]);
+    setMessage("");
     setShowModel(false);
   };
   return(
@@ -42,6 +71,13 @@ export default function Calendar() {
         <div style={overlayStyle}>
           <div style={modalStyle}>
             <h3>Select Day Type</h3>
+
+            {message && (
+              <p style={{color:"#dd4d4f" , fontSize:"15px"}}>
+                {message}
+              </p>
+            )}
+
             <button onClick={() => addEvent("workout")} style={workoutBtn}>Workout 💪</button>
             <button onClick={() => addEvent("rest")} style={restBtn}>Rest 💤</button>
             <button onClick={() => setShowModel(false)}>Cancel</button>

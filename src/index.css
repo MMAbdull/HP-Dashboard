@@ -74,9 +74,16 @@ button:focus-visible {
 }
 .fc-button:hover{
   background-color: #030712 !important;
+  color: white !important;
 }
 .fc-button:focus{
   border: 2px solid #030712 !important;
+}
+.fc-col-header-cell .fc-scrollgrid-sync-inner{
+  background-color: #030712;
+}
+.fc-col-header-cell-cushion{
+  color: #aadd00;
 }
 
 .fc-dayGridMonth-view .fc-daygrid-day {
@@ -111,7 +118,92 @@ button:focus-visible {
 }
 
 
-/* Chrome, Edge, Safari */
+.fc-timeGridWeek-view {
+  background-color: #030712;
+}
+.fc-timeGridWeek-view .fc-timegrid-col {
+  background-color: #030712;
+}
+
+.fc-timeGridWeek-view .fc-timegrid-axis {
+  color: #aadd00;
+}
+
+.fc-timeGridWeek-view .fc-timegrid-slot-label {
+  color: #aadd00;
+}
+
+.fc-timeGridWeek-view .fc-col-header-cell-cushion {
+  color: #aadd00;
+  font-weight: bold;
+}
+
+.fc-timeGridWeek-view .fc-scrollgrid,
+.fc-timeGridWeek-view td,
+.fc-timeGridWeek-view th {
+  border-color: white !important;
+}
+
+.fc-timeGridWeek-view .fc-day-today {
+  background-color: rgba(170, 221, 0, 0.15) !important;
+}
+
+.fc-timeGridWeek-view .fc-timegrid-slot:hover {
+  background-color: white !important;
+  cursor: pointer;
+}
+
+
+.fc-timeGridDay-view {
+  background-color: #030712;
+}
+
+
+.fc-timeGridDay-view .fc-timegrid-axis {
+  color: #aadd00;
+}
+
+
+.fc-timeGridDay-view .fc-timegrid-slot-label {
+  color: #aadd00;
+}
+
+
+.fc-timeGridDay-view .fc-timegrid-col {
+  background-color: #030712;
+}
+
+
+.fc-timeGridDay-view .fc-col-header-cell-cushion {
+  color: #aadd00;
+  font-weight: bold;
+}
+
+
+.fc-timeGridDay-view td,
+.fc-timeGridDay-view th {
+  border-color: white !important;
+}
+
+
+.fc-timeGridDay-view .fc-timegrid-slot:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+
+.fc-timeGridDay-view .fc-timegrid-slot:hover .fc-timegrid-slot-label {
+  color: #030712;
+}
+
+
+.fc-timeGridDay-view .fc-day-today {
+  background-color: rgba(170,221,0,0.15) !important;
+}
+
+
+
+
 ::-webkit-scrollbar {
   width: 10px;
 }
