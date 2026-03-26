@@ -1,4 +1,4 @@
-const API_KEY = "45e29345ae37400c899d95abdc3a3fc6";
+const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = "https://newsapi.org/v2";
 
 export async function getHealthNews(){
