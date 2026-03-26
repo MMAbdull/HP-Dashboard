@@ -4,14 +4,14 @@ function L_Sidebar() {
 
   return (
     <aside className="w-64 bg-gray-950 text-white sticky p-4 flex flex-col h-screen shrink-0 top-0">
-      <div className="flex m-2 mb-4">  {/* Top part: logo */}
+      <div className="flex m-2 mb-4">
         <img src="/assets/hp-Logo.png" alt="HP Sidebar Logo" className="w-15 h-auto m-0.5" />
         <p className="text-white text-2xl" style={{ fontFamily: "'Montserrat', sans-serif" }}>
           HeavyProg
         </p>
-      </div> {/* End of top part */}
+      </div> 
 
-      <div className="flex flex-col gap-8 mt-5 flex-1">  {/* Mid part: Sidebar */}
+      <div className="flex flex-col gap-8 mt-5 flex-1">  
         <div className="flex flex-col gap-10 mt-6">
           <NavLink 
           to="/"
@@ -296,7 +296,7 @@ function L_Sidebar() {
           </>
           )}
         </NavLink>
-      </div> {/* End of mid part */}
+      </div> 
     </aside>
   );
 }
