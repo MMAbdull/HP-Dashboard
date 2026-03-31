@@ -1,8 +1,6 @@
-import { BrowserRouter as Router } from "react-router-dom";
 import L_Sidebar from "./components/L_Sidebar";
 import TopBar from "./components/TopBar";
 import Content from "./components/Content";
-import { useState } from "react";
 
 
 function App() {

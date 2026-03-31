@@ -3,15 +3,15 @@ import { delay, easeIn, motion } from "framer-motion";
 
 
 function Home() {
-  const sectionVariants ={
-    hidden:{opacity:0,y:50},
-    visible:(i = 1) =>({
-      opacity:1,
-      y:0,
-      transition:{
-        delay:i*0.2,
-        duration:0.6,
-        ease:"easOut",
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easOut",
       },
 
     }),
@@ -19,18 +19,18 @@ function Home() {
   };
   return (
     <main>
-      <motion.section 
-      custom={0}
-      initial="hidden"
-      animate="visible"
-      variants={sectionVariants}
-      className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+      <motion.section
+        custom={0}
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+        className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
       >
-      <section className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
-        <div className="flex flex-col gap-5 bg-gray-950 p-6 rounded-3xl">
-          <h2 className="text-white text-3xl font-semibold mb-4">Workouts</h2>
-          <div className="flex justify-center items-center">    {/*Reminder To me to Replace with Grid (Servse the idea) */}
-            <div className="
+        <section className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
+          <div className="flex flex-col gap-5 bg-gray-950 p-6 rounded-3xl">
+            <h2 className="text-white text-3xl font-semibold mb-4">Workouts</h2>
+            <div className="flex justify-center items-center">    {/*Reminder To me to Replace with Grid (Servse the idea) or not, it depends*/}
+              <div className="
             group
             flex items-center      
             overflow-hidden
@@ -45,32 +45,32 @@ function Home() {
             hover:w-80
             hover:bg-[#aadd00]
             ">
-              <div className="
+                <div className="
           flex 
           flex-col
           items-start 
           gap-2
           shrink-0
           ">
-                <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Upper Body</h1>
-                <div className="flex items-center gap-3">
-                  <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
-                  <span className="text-black">6</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
-                  <span className="text-black">45 – 50m</span>
-                </div>
+                  <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Upper Body</h1>
+                  <div className="flex items-center gap-3">
+                    <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
+                    <span className="text-black">6</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
+                    <span className="text-black">45 – 50m</span>
+                  </div>
 
-                <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
-              </div>
-              <div className="
+                  <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
+                </div>
+                <div className="
             h-45
             w-45
             shrink-0
             overflow-hidden
             ">
-                <img src="/assets/UpperBody.png" alt="Upper-img" className="
+                  <img src="/assets/UpperBody.png" alt="Upper-img" className="
             w-full
             h-full
             object-cover
@@ -82,10 +82,10 @@ function Home() {
             group-hover:opacity-100
             group-hover:scale-100
               " />
-              </div>
+                </div>
 
-            </div>
-            <div className="
+              </div>
+              <div className="
         group
         flex items-center
         overflow-hidden
@@ -100,31 +100,31 @@ function Home() {
         hover:w-80
         hover:bg-[#aadd00]
         ">
-              <div className="
+                <div className="
           flex 
           flex-col
           items-start 
           gap-2
           shrink-0
           ">
-                <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Lower Body</h1>
-                <div className="flex items-center gap-3">
-                  <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
-                  <span className="text-black">6</span>
+                  <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Lower Body</h1>
+                  <div className="flex items-center gap-3">
+                    <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
+                    <span className="text-black">6</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
+                    <span className="text-black">30 – 60m</span>
+                  </div>
+                  <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
-                  <span className="text-black">30 – 60m</span>
-                </div>
-                <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
-              </div>
-              <div className="
+                <div className="
             h-45
             w-45
             shrink-0
             overflow-hidden
           ">
-                <img src="/assets/LowerBody.png" alt="Lower-img" className=" 
+                  <img src="/assets/LowerBody.png" alt="Lower-img" className=" 
           w-full
           h-full
           pr-8
@@ -138,9 +138,9 @@ function Home() {
           group-hover:scale-100
           
           " />
+                </div>
               </div>
-            </div>
-            <div className="
+              <div className="
         group
         flex items-center
         overflow-hidden
@@ -155,25 +155,25 @@ function Home() {
         hover:w-80
         hover:bg-[#aadd00]
         ">
-              <div className="
+                <div className="
           flex 
           flex-col
           items-start 
           gap-2
           shrink-0
           ">
-                <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Full Body</h1>
-                <div className="flex items-center gap-3">
-                  <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
-                  <span className="text-black">12</span>
+                  <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Full Body</h1>
+                  <div className="flex items-center gap-3">
+                    <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
+                    <span className="text-black">12</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
+                    <span className="text-black">45 – 75m</span>
+                  </div>
+                  <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
-                  <span className="text-black">45 – 75m</span>
-                </div>
-                <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
-              </div>
-              <div className="
+                <div className="
             h-45
             ml-5
             shrink-0
@@ -181,7 +181,7 @@ function Home() {
             group-hover:w-45
           
           ">
-                <img src="/assets/FullBody.png" alt="Full-img" className=" 
+                  <img src="/assets/FullBody.png" alt="Full-img" className=" 
           w-full
           h-full
           object-cover
@@ -194,9 +194,9 @@ function Home() {
           group-hover:scale-100
           
           " />
+                </div>
               </div>
-            </div>
-            <div className="
+              <div className="
         group
         flex items-center
         overflow-hidden
@@ -211,32 +211,32 @@ function Home() {
         hover:w-80
         hover:bg-[#aadd00]
         ">
-              <div className="
+                <div className="
           flex 
           flex-col
           items-start 
           gap-2
           shrink-0
           ">
-                <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Core & Abs</h1>
-                <div className="flex items-center gap-3">
-                  <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
-                  <span className="text-black">4-6</span>
+                  <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Core & Abs</h1>
+                  <div className="flex items-center gap-3">
+                    <img className="w-5 opacity-70" src="/assets/muscle.png" alt="Workout-Icon" />
+                    <span className="text-black">4-6</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
+                    <span className="text-black">15 – 30m</span>
+                  </div>
+                  <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
-                  <span className="text-black">15 – 30m</span>
-                </div>
-                <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
-              </div>
-              <div className="
+                <div className="
             h-45
             ml-4
             shrink-0
             overflow-hidden
             group-hover:w-45
           ">
-                <img src="/assets/CoreAbs.png" alt="Core-img" className=" 
+                  <img src="/assets/CoreAbs.png" alt="Core-img" className=" 
           w-full
           h-full
           object-cover
@@ -249,9 +249,9 @@ function Home() {
           group-hover:scale-100
           
           " />
+                </div>
               </div>
-            </div>
-            <div className="
+              <div className="
         group
         flex items-center
         overflow-hidden
@@ -266,31 +266,31 @@ function Home() {
         hover:w-80
         hover:bg-[#aadd00]
         ">
-              <div className="
+                <div className="
           flex 
           flex-col
           items-start 
           gap-2
           shrink-0
           ">
-                <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Cardio</h1>
-                <div className="flex items-center gap-3">
-                  <img className="w-5 opacity-70" src="/assets/intensity.png" alt="Workout-Icon" />
-                  <span className="text-black">Moderate - High</span>
+                  <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Cardio</h1>
+                  <div className="flex items-center gap-3">
+                    <img className="w-5 opacity-70" src="/assets/intensity.png" alt="Workout-Icon" />
+                    <span className="text-black">Moderate - High</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
+                    <span className="text-black">15 – 150m</span>
+                  </div>
+                  <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
-                  <span className="text-black">15 – 150m</span>
-                </div>
-                <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
-              </div>
-              <div className="
+                <div className="
           h-50
           w-45
           shrink-0
           overflow-hidden
           ">
-                <img src="/assets/Cardio.png" alt="Cardio-img" className=" 
+                  <img src="/assets/Cardio.png" alt="Cardio-img" className=" 
           w-full
           h-full
           object-cover
@@ -303,9 +303,9 @@ function Home() {
           group-hover:scale-100
           
           " />
+                </div>
               </div>
-            </div>
-            <div className="
+              <div className="
         group
         flex items-center
         overflow-hidden
@@ -320,31 +320,31 @@ function Home() {
         hover:w-80
         hover:bg-[#aadd00]
         ">
-              <div className="
+                <div className="
           flex 
           flex-col
           items-start 
           gap-2
           shrink-0
           ">
-                <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Swimming</h1>
-                <div className="flex items-center gap-3">
-                  <img className="w-5 opacity-70" src="/assets/swimming.png" alt="Swim-Icon" />
-                  <span className="text-black">Technique + Laps</span>
+                  <h1 className="text-2xl text-black font-semibold" style={{ fontFamily: "'Montserrat', sans-serif" }}>Swimming</h1>
+                  <div className="flex items-center gap-3">
+                    <img className="w-5 opacity-70" src="/assets/swimming.png" alt="Swim-Icon" />
+                    <span className="text-black">Technique + Laps</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
+                    <span className="text-black">30–45m</span>
+                  </div>
+                  <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
                 </div>
-                <div className="flex items-center gap-2">
-                  <img className="w-5" src="/assets/clock.png" alt="Time-Icon" />
-                  <span className="text-black">30–45m</span>
-                </div>
-                <button className="w-20 h-8 font-bold bg-black cursor-pointer rounded-lg" style={{ fontFamily: "'Montserrat', sans-serif" }}>Start</button>
-              </div>
-              <div className="
+                <div className="
             h-40
             w-36
             shrink-0
             overflow-hidden
           ">
-                <img src="/assets/Swimming-1.png" alt="Gym-Pic" className=" 
+                  <img src="/assets/Swimming-1.png" alt="Gym-Pic" className=" 
           w-full
           h-full
           object-cover
@@ -357,9 +357,9 @@ function Home() {
           group-hover:scale-100
           
           " />
+                </div>
               </div>
-            </div>
-            <div className="
+              <div className="
           relative
           pl-4
           m-2
@@ -371,26 +371,26 @@ function Home() {
           rounded-4xl
           transition-all duration-500
           hover:bg-[#aadd00]">
-              <h1 className="absolute left-1 bottom-0 text-5xl text-black/50 rounded-2xl">+</h1>
+                <h1 className="absolute left-1 bottom-0 text-5xl text-black/50 rounded-2xl">+</h1>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </motion.section>
-      
-      <motion.section 
-      custom={1}
-      initial="hidden"
-      animate="visible"
-      variants={sectionVariants}
-      className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+
+      <motion.section
+        custom={1}
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+        className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
       >
-      <section className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
+        <section className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
 
-        <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
-          <h2 className="text-white text-3xl font-semibold mb-2">Weekly Progress</h2>
+          <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
+            <h2 className="text-white text-3xl font-semibold mb-2">Weekly Progress</h2>
 
-          <div className="
+            <div className="
           flex justify-around items-center
           rounded-2xl
           px-5 py-5
@@ -402,400 +402,400 @@ function Home() {
           ">
 
 
-            <div className="flex flex-col items-center">
-              <div className="flex items-center space-x-1">
-                <span className="text-5xl font-extrabold text-green-500">6</span>
-                <span className="text-green-500 font-bold text-xl">↑</span>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center space-x-1">
+                  <span className="text-5xl font-extrabold text-green-500">6</span>
+                  <span className="text-green-500 font-bold text-xl">↑</span>
+                </div>
+                <span className="text-lg font-bold text-white/50 mt-2">Upper Body Muscle Groups</span>
+                <span className="text-white/50 font-semibold mt-1">6+ exercises each</span>
+
+                <div className="w-24 h-2 rounded-full mt-2">
+                  <div className="h-2 bg-green-500 rounded-full w-full"></div>
+                </div>
               </div>
-              <span className="text-lg font-bold text-white/50 mt-2">Upper Body Muscle Groups</span>
-              <span className="text-white/50 font-semibold mt-1">6+ exercises each</span>
 
-              <div className="w-24 h-2 rounded-full mt-2">
-                <div className="h-2 bg-green-500 rounded-full w-full"></div>
+              <p className="text-5xl text-white/80">|</p>
+
+
+              <div className="flex flex-col items-center">
+                <div className="flex items-center space-x-1">
+                  <span className="text-5xl font-extrabold text-green-500">1</span>
+                  <span className="text-green-500 font-bold text-xl">↑</span>
+                </div>
+                <span className="text-lg font-bold text-white/50 mt-2">Lower Body Focus</span>
+                <span className="text-white/50 font-semibold mt-1">6 exercises</span>
+                <div className="w-24 h-2 rounded-full mt-2">
+                  <div className="h-2 bg-green-500 rounded-full w-full"></div>
+                </div>
               </div>
-            </div>
 
-            <p className="text-5xl text-white/80">|</p>
+              <p className="text-5xl text-white/80">|</p>
 
 
-            <div className="flex flex-col items-center">
-              <div className="flex items-center space-x-1">
-                <span className="text-5xl font-extrabold text-green-500">1</span>
-                <span className="text-green-500 font-bold text-xl">↑</span>
+              <div className="flex flex-col items-center">
+                <div className="flex items-center space-x-1">
+                  <span className="text-5xl font-extrabold text-orange-500">0</span>
+                  <span className="text-orange-500 font-bold text-xl">↓</span>
+                </div>
+                <span className="text-lg font-bold text-white/50 mt-2">Cardio / Swimming</span>
+                <span className="text-white/50 font-semibold mt-1">1 session</span>
+                <div className="w-24 h-2 rounded-full mt-2">
+                  <div className="h-2 bg-orange-500 rounded-full w-full"></div>
+                </div>
               </div>
-              <span className="text-lg font-bold text-white/50 mt-2">Lower Body Focus</span>
-              <span className="text-white/50 font-semibold mt-1">6 exercises</span>
-              <div className="w-24 h-2 rounded-full mt-2">
-                <div className="h-2 bg-green-500 rounded-full w-full"></div>
+
+              <p className="text-5xl text-white/80">|</p>
+
+
+              <div className="flex flex-col items-center">
+                <span className="text-5xl font-extrabold text-[#aadd00]">21</span>
+                <span className="text-lg font-bold text-white/50 mt-2">Total Exercises</span>
+                <span className="text-white/50 font-semibold mt-1">Sum of all workouts</span>
+                <div className="w-24 h-2 rounded-full mt-2">
+                  <div className="h-2 bg-[#aadd00] rounded-full w-full"></div>
+                </div>
               </div>
-            </div>
 
-            <p className="text-5xl text-white/80">|</p>
+              <p className="text-5xl text-white/80">|</p>
 
 
-            <div className="flex flex-col items-center">
-              <div className="flex items-center space-x-1">
-                <span className="text-5xl font-extrabold text-orange-500">0</span>
-                <span className="text-orange-500 font-bold text-xl">↓</span>
+              <div className="flex flex-col items-center">
+                <span className="text-5xl font-extrabold text-[#aadd00]">10h 12m</span>
+                <span className="text-lg font-bold text-white/50 mt-2">Avg Time</span>
+                <span className="text-white/50 font-semibold mt-1">Per week</span>
+                <div className="w-24 h-2 rounded-full mt-2">
+                  <div className="h-2 bg-[#aadd00] rounded-full w-full"></div>
+                </div>
               </div>
-              <span className="text-lg font-bold text-white/50 mt-2">Cardio / Swimming</span>
-              <span className="text-white/50 font-semibold mt-1">1 session</span>
-              <div className="w-24 h-2 rounded-full mt-2">
-                <div className="h-2 bg-orange-500 rounded-full w-full"></div>
-              </div>
-            </div>
 
-            <p className="text-5xl text-white/80">|</p>
+              <p className="text-5xl text-white/80">|</p>
 
 
-            <div className="flex flex-col items-center">
-              <span className="text-5xl font-extrabold text-[#aadd00]">21</span>
-              <span className="text-lg font-bold text-white/50 mt-2">Total Exercises</span>
-              <span className="text-white/50 font-semibold mt-1">Sum of all workouts</span>
-              <div className="w-24 h-2 rounded-full mt-2">
-                <div className="h-2 bg-[#aadd00] rounded-full w-full"></div>
-              </div>
-            </div>
-
-            <p className="text-5xl text-white/80">|</p>
-
-
-            <div className="flex flex-col items-center">
-              <span className="text-5xl font-extrabold text-[#aadd00]">10h 12m</span>
-              <span className="text-lg font-bold text-white/50 mt-2">Avg Time</span>
-              <span className="text-white/50 font-semibold mt-1">Per week</span>
-              <div className="w-24 h-2 rounded-full mt-2">
-                <div className="h-2 bg-[#aadd00] rounded-full w-full"></div>
-              </div>
-            </div>
-
-            <p className="text-5xl text-white/80">|</p>
-
-
-            <div className="flex flex-col items-center">
-              <span className="text-5xl font-extrabold text-[#aadd00]">5,100</span>
-              <span className="text-lg font-bold text-white/50 mt-2">kcal / week</span>
-              <span className="text-white/50 font-semibold mt-1">Burned</span>
-              <div className="w-24 h-2 rounded-full mt-2">
-                <div className="h-2 bg-[#aadd00] rounded-full w-full"></div>
+              <div className="flex flex-col items-center">
+                <span className="text-5xl font-extrabold text-[#aadd00]">5,100</span>
+                <span className="text-lg font-bold text-white/50 mt-2">kcal / week</span>
+                <span className="text-white/50 font-semibold mt-1">Burned</span>
+                <div className="w-24 h-2 rounded-full mt-2">
+                  <div className="h-2 bg-[#aadd00] rounded-full w-full"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </motion.section>
 
-      <motion.section 
-      custom={2}
-      initial="hidden"
-      animate="visible"
-      variants={sectionVariants}
-      className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+      <motion.section
+        custom={2}
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+        className="mx-5 mt-10 space-y-6 bg-gray-950 rounded-3xl min-h-100"
       >
-      <section className="mx-5 mt-10 mb-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
+        <section className="mx-5 mt-10 mb-10 space-y-6 bg-gray-950 rounded-3xl min-h-100">
 
-        <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
+          <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
 
-          <h2 className="text-white text-3xl font-semibold mb-5">
-            Weekly Plan
-          </h2>
+            <h2 className="text-white text-3xl font-semibold mb-5">
+              Weekly Plan
+            </h2>
 
-          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60 transition-all duration-200 hover:bg-blue-400/10 ">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Sun</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-blue-500 ">Feb 2</p>
+            <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60 transition-all duration-200 hover:bg-blue-400/10 ">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold">Sun</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-blue-500 ">Feb 2</p>
+              </div>
+
+              <div className="min-w-30">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-500">Rest Day</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/30 text-sm transition-all duration-200 group-hover:text-blue-500">Full recovery & sleep</p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-500">—</p>
+              </div>
             </div>
 
-            <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-500">Rest Day</p>
+            <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-[#aadd00]/5">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold">Mon</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-[#aadd00]">Feb 3</p>
+              </div>
+
+              <div className="min-w-30">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-[#aadd00] text-sm font-medium">Upper Body</p>
+              </div>
+
+              <div className="min-w-38">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">Chest & Triceps</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+                <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-[#aadd00]">
+                  Bench Press • Incline DB • Cable Fly
+                </p>
+              </div>
+
+              <div className="min-w-23 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">4 × 10</p>
+              </div>
+
+              <div className="min-w-18 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">45m</p>
+              </div>
+
+              <div className="min-w-35">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-[#aadd00]">
+                  Controlled tempo
+                </p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-[#aadd00] text-sm font-medium">Completed</p>
+              </div>
             </div>
 
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/30 text-sm transition-all duration-200 group-hover:text-blue-500">Full recovery & sleep</p>
+            <div className=" group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-yellow-400/10">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Tue</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-yellow-400">Feb 4</p>
+              </div>
+
+              <div className="min-w-23">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">Lower Body</p>
+              </div>
+
+              <div className="min-w-23">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">Quads & Glutes</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+                <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
+                  Squats • Leg Press • Lunges
+                </p>
+              </div>
+
+              <div className="min-w-23 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">5 × 8</p>
+              </div>
+
+              <div className="min-w-18 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">50m</p>
+              </div>
+
+              <div className="min-w-35">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
+                  Focus on depth
+                </p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-yellow-400 text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">In Progress</p>
+              </div>
             </div>
 
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-500">—</p>
+            <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-red-500/10">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Wed</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-red-600">Feb 5</p>
+              </div>
+
+              <div className="min-w-30">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-red-600">Cardio</p>
+              </div>
+
+              <div className="min-w-38">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">Full Body</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+                <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-red-600">
+                  Treadmill • Cycling • Jump Rope
+                </p>
+              </div>
+
+              <div className="min-w-23 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Distance</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">—</p>
+              </div>
+
+              <div className="min-w-18 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">30m</p>
+              </div>
+
+              <div className="min-w-35">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-red-600">
+                  Moderate intensity
+                </p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-white/50 text-sm font-medium transition-all duration-200 group-hover:text-red-600">Not Started</p>
+              </div>
             </div>
+
+            <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60 transition-all duration-200 hover:bg-blue-400/10">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold">Thu</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-blue-400">Feb 6</p>
+              </div>
+
+              <div className="min-w-30">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-400">Rest Day</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/30 text-sm transition-all duration-200 group-hover:text-blue-400">Mobility & stretching</p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-400">—</p>
+              </div>
+            </div>
+
+
+            <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-red-500/10">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold ">Fri</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-red-500">Feb 7</p>
+              </div>
+
+              <div className="min-w-30">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-red-500">Core</p>
+              </div>
+
+              <div className="min-w-38">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">Abs & Lower Back</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+                <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-red-500">
+                  Plank • Hanging Raises • Russian Twist
+                </p>
+              </div>
+
+              <div className="min-w-23 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">4 × 15</p>
+              </div>
+
+              <div className="min-w-18 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">30m</p>
+              </div>
+
+              <div className="min-w-35">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-red-500">
+                  Slow & controlled
+                </p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-white/50 text-sm font-medium transition-all duration-200 group-hover:text-red-500">Not Started</p>
+              </div>
+            </div>
+
+
+            <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4  transition-all duration-200 hover:bg-yellow-400/10">
+              <div className="min-w-23">
+                <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Sat</p>
+                <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-yellow-400">Feb 8</p>
+              </div>
+
+              <div className="min-w-30">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
+                <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">Swimming</p>
+              </div>
+
+              <div className="min-w-38">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">Full Body</p>
+              </div>
+
+              <div className="flex-1">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
+                <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
+                  Freestyle • Backstroke
+                </p>
+              </div>
+
+              <div className="min-w-23 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Distance / Labs</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">80M • 4</p>
+              </div>
+
+              <div className="min-w-18 text-center">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
+                <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">30m</p>
+              </div>
+
+              <div className="min-w-35">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
+                <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
+                  Easy pace
+                </p>
+              </div>
+
+              <div className="min-w-23 text-right">
+                <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
+                <p className="text-yellow-400 text-sm font-medium">In Progress</p>
+              </div>
+            </div>
+
           </div>
-
-          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-[#aadd00]/5">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Mon</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-[#aadd00]">Feb 3</p>
-            </div>
-
-            <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium">Upper Body</p>
-            </div>
-
-            <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">Chest & Triceps</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
-              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-[#aadd00]">
-                Bench Press • Incline DB • Cable Fly
-              </p>
-            </div>
-
-            <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">4 × 10</p>
-            </div>
-
-            <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-[#aadd00]">45m</p>
-            </div>
-
-            <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-[#aadd00]">
-                Controlled tempo
-              </p>
-            </div>
-
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-[#aadd00] text-sm font-medium">Completed</p>
-            </div>
-          </div>
-
-          <div className=" group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-yellow-400/10">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Tue</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-yellow-400">Feb 4</p>
-            </div>
-
-            <div className="min-w-23">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">Lower Body</p>
-            </div>
-
-            <div className="min-w-23">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">Quads & Glutes</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
-              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
-                Squats • Leg Press • Lunges
-              </p>
-            </div>
-
-            <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">5 × 8</p>
-            </div>
-
-            <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">50m</p>
-            </div>
-
-            <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
-                Focus on depth
-              </p>
-            </div>
-
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-yellow-400 text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">In Progress</p>
-            </div>
-          </div>
-
-          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-red-500/10">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Wed</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-red-600">Feb 5</p>
-            </div>
-
-            <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-red-600">Cardio</p>
-            </div>
-
-            <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">Full Body</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
-              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-red-600">
-                Treadmill • Cycling • Jump Rope
-              </p>
-            </div>
-
-            <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Distance</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">—</p>
-            </div>
-
-            <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-600">30m</p>
-            </div>
-
-            <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-red-600">
-                Moderate intensity
-              </p>
-            </div>
-
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-white/50 text-sm font-medium transition-all duration-200 group-hover:text-red-600">Not Started</p>
-            </div>
-          </div>
-
-          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 opacity-60 transition-all duration-200 hover:bg-blue-400/10">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold">Thu</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-blue-400">Feb 6</p>
-            </div>
-
-            <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-400">Rest Day</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/30 text-sm transition-all duration-200 group-hover:text-blue-400">Mobility & stretching</p>
-            </div>
-
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-white/40 text-sm transition-all duration-200 group-hover:text-blue-400">—</p>
-            </div>
-          </div>
-
-
-          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4 transition-all duration-200 hover:bg-red-500/10">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold ">Fri</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-red-500">Feb 7</p>
-            </div>
-
-            <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-red-500">Core</p>
-            </div>
-
-            <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">Abs & Lower Back</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
-              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-red-500">
-                Plank • Hanging Raises • Russian Twist
-              </p>
-            </div>
-
-            <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Sets</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">4 × 15</p>
-            </div>
-
-            <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-red-500">30m</p>
-            </div>
-
-            <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-red-500">
-                Slow & controlled
-              </p>
-            </div>
-
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-white/50 text-sm font-medium transition-all duration-200 group-hover:text-red-500">Not Started</p>
-            </div>
-          </div>
-
-
-          <div className="group flex items-center gap-6 rounded-2xl bg-white/5 px-5 py-4  transition-all duration-200 hover:bg-yellow-400/10">
-            <div className="min-w-23">
-              <p className="text-white text-lg font-semibold transition-all duration-200 group-hover:text-white">Sat</p>
-              <p className="text-white/40 text-xs transition-all duration-200 group-hover:text-yellow-400">Feb 8</p>
-            </div>
-
-            <div className="min-w-30">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Workout</p>
-              <p className="text-[#aadd00] text-sm font-medium transition-all duration-200 group-hover:text-yellow-400">Swimming</p>
-            </div>
-
-            <div className="min-w-38">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Muscles</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">Full Body</p>
-            </div>
-
-            <div className="flex-1">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Exercises</p>
-              <p className="text-white text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
-                Freestyle • Backstroke
-              </p>
-            </div>
-
-            <div className="min-w-23 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Distance / Labs</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">80M • 4</p>
-            </div>
-
-            <div className="min-w-18 text-center">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">ET</p>
-              <p className="text-white text-sm transition-all duration-200 group-hover:text-yellow-400">30m</p>
-            </div>
-
-            <div className="min-w-35">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Notes</p>
-              <p className="text-white/50 text-sm truncate transition-all duration-200 group-hover:text-yellow-400">
-                Easy pace
-              </p>
-            </div>
-
-            <div className="min-w-23 text-right">
-              <p className="text-white/40 text-xs uppercase transition-all duration-200 group-hover:text-white">Status</p>
-              <p className="text-yellow-400 text-sm font-medium">In Progress</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
+        </section>
       </motion.section>
-     
 
-      <motion.section 
-      custom={3}
-      initial="hidden"
-      animate="visible"
-      variants={sectionVariants}
-      className="mx-5 mt-10 mb-16 space-y-6 bg-gray-950 rounded-3xl min-h-100"
+
+      <motion.section
+        custom={3}
+        initial="hidden"
+        animate="visible"
+        variants={sectionVariants}
+        className="mx-5 mt-10 mb-16 space-y-6 bg-gray-950 rounded-3xl min-h-100"
       >
-      <section className="mx-5 mt-10 mb-16 space-y-6 bg-gray-950 rounded-3xl min-h-100">
-        <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
+        <section className="mx-5 mt-10 mb-16 space-y-6 bg-gray-950 rounded-3xl min-h-100">
+          <div className="flex flex-col gap-10 bg-gray-950 p-6 rounded-3xl">
 
-          <h2 className="text-white text-3xl font-semibold mb-5">
-            Today’s Focus
-          </h2>
+            <h2 className="text-white text-3xl font-semibold mb-5">
+              Today’s Focus
+            </h2>
 
-          <div className="
+            <div className="
             group
             flex items-center justify-between
             rounded-2xl
@@ -810,32 +810,32 @@ function Home() {
             ">
 
 
-            <div className="flex flex-col gap-1">
-              <p className="text-white/50 text-sm uppercase">Today</p>
-              <p className="text-white text-2xl font-semibold">Upper Body</p>
-              <p className="text-white/60 text-sm">
-                Chest & Triceps
-              </p>
-            </div>
+              <div className="flex flex-col gap-1">
+                <p className="text-white/50 text-sm uppercase">Today</p>
+                <p className="text-white text-2xl font-semibold">Upper Body</p>
+                <p className="text-white/60 text-sm">
+                  Chest & Triceps
+                </p>
+              </div>
 
 
-            <div className="flex flex-col gap-1 text-center">
-              <p className="text-white/40 text-xs uppercase">Exercises</p>
-              <p className="text-white text-sm">
-                Bench Press • Incline DB • Cable Fly • Overhead Tricep Extension • Tricep Dips • Close-Grip Bench Press
-              </p>
-              <p className="text-white/40 text-xs mt-1">
-                6 exercises • 4 × 10
-              </p>
-            </div>
+              <div className="flex flex-col gap-1 text-center">
+                <p className="text-white/40 text-xs uppercase">Exercises</p>
+                <p className="text-white text-sm">
+                  Bench Press • Incline DB • Cable Fly • Overhead Tricep Extension • Tricep Dips • Close-Grip Bench Press
+                </p>
+                <p className="text-white/40 text-xs mt-1">
+                  6 exercises • 4 × 10
+                </p>
+              </div>
 
 
-            <div className="flex flex-col items-end gap-2">
-              <p className="text-[#aadd00] text-sm font-medium">
-                In Progress
-              </p>
+              <div className="flex flex-col items-end gap-2">
+                <p className="text-[#aadd00] text-sm font-medium">
+                  In Progress
+                </p>
 
-              <button className="
+                <button className="
                 px-6 py-2
                 rounded-xl
                 bg-[#aadd00]
@@ -845,25 +845,25 @@ function Home() {
                 hover:scale-105
                 transition
                 ">
-                Continue
-              </button>
+                  Continue
+                </button>
+              </div>
+
+            </div>
+
+
+            <div>
+              <div className="flex justify-between text-xs text-white/40 mb-1">
+                <span>Progress</span>
+                <span>2 / 6 exercises</span>
+              </div>
+              <div className="w-full h-2 bg-white/10 rounded-full">
+                <div className="h-2 w-1/4 bg-[#aadd00] rounded-full"></div>
+              </div>
             </div>
 
           </div>
-
-
-          <div>
-            <div className="flex justify-between text-xs text-white/40 mb-1">
-              <span>Progress</span>
-              <span>2 / 6 exercises</span>
-            </div>
-            <div className="w-full h-2 bg-white/10 rounded-full">
-              <div className="h-2 w-1/4 bg-[#aadd00] rounded-full"></div>
-            </div>
-          </div>
-
-        </div>
-      </section>
+        </section>
       </motion.section>
 
       <section className="flex justify-center mb-10">
@@ -881,11 +881,11 @@ function Home() {
             rounded-4xl
             transition-all duration-500
             hover:bg-[#aadd00]">
-              <h1 className="absolute text-6xl bottom-1.5 text-white rounded-2xl transition-all duration-500 group-hover:text-black">+</h1>
-            </div>
+          <h1 className="absolute text-6xl bottom-1.5 text-white rounded-2xl transition-all duration-500 group-hover:text-black">+</h1>
+        </div>
       </section>
 
-      
+
 
 
 
