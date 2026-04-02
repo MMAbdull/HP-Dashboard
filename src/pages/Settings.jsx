@@ -1,6 +1,8 @@
 import { useState } from "react";
 import SettingsTabs from "../components/settings/SettingsTabs";
 import UserPreferences from "../components/settings/UserPreferences/PreferencesCard";
+import WorkoutsSettingsCards from "../components/settings/WorkoutSettings/WorkoutCard";
+import AccountSettingsCard from "../components/settings/AccountSettings/AccountSettingsCard";
 function Settings() {
 
   const [activeTab, setActiveTab] = useState("preferences");
@@ -14,7 +16,11 @@ function Settings() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
       />
-      <UserPreferences />
+      <div className="mt-6">
+        {activeTab === "preferences" && <UserPreferences />}
+        {activeTab === "workouts" && <WorkoutsSettingsCards />}
+        {activeTab === "account" && <AccountSettingsCard/>}
+      </div>
     </div>
   );
 }

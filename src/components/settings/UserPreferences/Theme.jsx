@@ -22,7 +22,7 @@ export default function Theme() {
           <button
             key={key}
             onClick={() => setTheme(key)}
-            style={{ backgroundColor: themes[key].topBar }} // ✅ THIS FIXES IT
+            style={{ backgroundColor: themes[key].topBar }} 
             className={`
             w-10 h-10 rounded-full
             border-2 transition-all duration-200
