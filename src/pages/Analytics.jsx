@@ -41,7 +41,7 @@ export default function Analytics() {
   return (
     <main className="min-h-screen p-5">
       <h1 className="text-gray-950 text-xl">Filters</h1>
-      <section className="flex items-start gap-5 h-20">
+      <section className="  flex gap-3 overflow-x-auto pb-2 md:overflow-visible md:justify-start">
         <TimeRangeFilter
           value={dataRange}
           onChange={setDataRange}
