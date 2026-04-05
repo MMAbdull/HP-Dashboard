@@ -9,71 +9,39 @@ export default function NewsCard({ articles }) {
   } = articles;
 
   return (
-    <div
-      style={{
-        display: "flex",
-        margin: "20px",
-        borderRadius: "12px",
-        overflow: "hidden",
-        background: "#111",
-        color: "#fff"
-      }}
-    >
+    <div className="flex flex-col md:flex-row m-5 rounded-xl overflow-hidden bg-[#111] text-white">
 
       <a
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        style={{
-          position: "relative",
-          width: "30%",
-          minHeight: "180px",
-          textDecoration: "none",
-          color: "white"
-        }}
+        className="relative w-full md:w-[30%] min-h-50 md:min-h-45"
       >
         {urlToImage && (
           <img
             src={urlToImage}
             alt={title}
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover"
-            }}
+            className="w-full h-full object-cover"
           />
         )}
 
-        <div
-          style={{
-            position: "absolute",
-            inset: 0,
-            background: "rgba(0,0,0,0.3)",
-            padding: "15px",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end"
-          }}
-        >
-          <h3 style={{ margin: 0 }}>{title}</h3>
-          <p style={{ margin: "5px 0 0", fontSize: "14px" }}>
-            {description?.slice(0, 80)}...
+        <div className="absolute inset-0 bg-black/40 p-4 flex flex-col justify-end">
+          <h3 className="m-0 text-[clamp(14px,2vw,20px)] font-semibold leading-[1.3] line-clamp-2">
+            {title}
+          </h3>
+
+          <p className="mt-1 text-xs opacity-80 line-clamp-2 md:line-clamp-none">
+            {description}
           </p>
         </div>
       </a>
 
-      <div
-        style={{
-          width: "70%",
-          padding: "20px",
-          background: "#030712"
-        }}
-      >
-        <p style={{ margin: 0 }}>
+      <div className="w-full md:w-[70%] p-4 md:p-5 bg-gray-950">
+        <p className="m-0">
           <strong>Source:</strong> {source?.name}
         </p>
 
-        <p style={{ margin: "10px 0" }}>
+        <p className="my-2">
           <strong>Published:</strong>{" "}
           {new Date(publishedAt).toLocaleDateString()}
         </p>
@@ -82,13 +50,9 @@ export default function NewsCard({ articles }) {
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          style={{
-            color: "#aadd00",
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}
+          className="text-[#aadd00] font-bold no-underline"
         >
-          Read Full Articles →
+          Read Full Article →
         </a>
       </div>
     </div>
