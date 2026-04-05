@@ -9,7 +9,7 @@ import Logout from "../pages/Logout";
 
 function Content() {
   return (
-    <main className="flex-1 bg-white overflow-y-auto ">
+    <main className="flex-1 bg-white overflow-y-auto overflow-x-hidden p-3 lg:p-6">
       <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="/analytics" element={<Analytics/>}/>

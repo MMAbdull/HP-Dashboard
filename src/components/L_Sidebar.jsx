@@ -2,15 +2,41 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { SettingsContext } from "./settings/SettingsProvider";
 
-function L_Sidebar() {
+function L_Sidebar({ isOpen, setIsOpen }) {
 
   const { themeColors } = useContext(SettingsContext);
 
   return (
+    <div>
+    {isOpen && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40 lg:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+
+
+
     <aside
-      className="w-64 sticky p-4 flex flex-col h-screen shrink-0 top-0"
+      className={`
+      fixed top-0 left-0 h-full w-64 p-4 flex flex-col z-50
+      transform transition-transform duration-300
+
+      ${isOpen ? "translate-x-0" : "-translate-x-full"}
+      lg:translate-x-0
+      `}
       style={{ backgroundColor: themeColors.sidebar, color: themeColors.sidebarText }}
     >
+      
+      
+
+      <button
+        className="lg:hidden mb-4 text-xl"
+        onClick={() => setIsOpen(false)}
+      >
+        ✕
+      </button>
+
       <div className="flex m-2 mb-4">
         <img src="/assets/hp-Logo.png" alt="HP Sidebar Logo" className="w-15 h-auto m-0.5" />
         <p
@@ -236,7 +262,7 @@ function L_Sidebar() {
           </NavLink>
         </div>
 
-  
+
         <NavLink
           to="/logout"
           className={({ isActive }) => `
@@ -266,6 +292,7 @@ function L_Sidebar() {
 
       </div>
     </aside>
+    </div>
   );
 }
 

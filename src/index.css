@@ -4,6 +4,7 @@
   --breakpoint-*: initial;
   --breakpoint-sm:480px;
   --breakpoint-md:768px;
+  --breakpoint-lg:1024px;
   --breakpoint-xl:1080px;
   --color-twitter-blue:#1DA1F2
 }
