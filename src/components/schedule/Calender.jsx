@@ -5,15 +5,16 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 
 export default function Calendar() {
-  const [events,setEvents] = useState([]);
+  const [events, setEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [showModel, setShowModel] = useState(false);
-  const [message,setMessage] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleDateClick = (info) => {
     setSelectedDate(info.dateStr);
     setShowModel(true);
   };
+
   const addEvent = (type) => {
     const selectedDayEvents = events.filter(
       (event) => event.date === selectedDate
@@ -21,9 +22,9 @@ export default function Calendar() {
 
     const workoutsToday = selectedDayEvents.filter(
       (event) => event.title.includes("Workout")
-    )
+    );
 
-    if(type === "workout" && workoutsToday.length >=6){
+    if (type === "workout" && workoutsToday.length >= 6) {
       setMessage("Maximum 6 Workouts per day");
       return;
     }
@@ -32,102 +33,85 @@ export default function Calendar() {
       (event) => event.title.includes("Rest")
     );
 
-    if(type === "workout" && restToday){
-    setMessage("You already scheduled a Rest day.");
-    return;
+    if (type === "workout" && restToday) {
+      setMessage("You already scheduled a Rest day.");
+      return;
     }
 
-    if(type === "rest" && selectedDayEvents.length > 0){
+    if (type === "rest" && selectedDayEvents.length > 0) {
       setMessage("You already scheduled workouts this day. NO REST");
       return;
     }
 
     const newEvent = {
-      title: type === "workout" ? "Workout 💪 " : "Rest 💤",
+      title: type === "workout" ? "Workout 💪" : "Rest 💤",
       date: selectedDate,
       backgroundColor: type === "workout" ? "#2563eb" : "#6b7280",
       borderColor: type === "workout" ? "#2563eb" : "#6b7280",
     };
 
-    setEvents([...events,newEvent]);
+    setEvents([...events, newEvent]);
     setMessage("");
     setShowModel(false);
   };
-  return(
-    <div style={{padding:"20px"}}>
-      <FullCalendar
-      plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-      initialView="dayGridMonth"
-      events={events}
-      dateClick={handleDateClick}
-      height="80vh"
-      headerToolbar={{
-        left: "prev,next today",
-        center:"title",
-        right:"dayGridMonth,timeGridWeek,timeGridDay",
-      }}
-      />
+
+  return (
+    <div className="p-4 md:p-6">
+
+      <div className="bg-white rounded-2xl shadow p-3 md:p-5">
+        <FullCalendar
+          plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+          initialView="dayGridMonth"
+          events={events}
+          dateClick={handleDateClick}
+          height="auto"
+          headerToolbar={{
+            left: "prev,next",
+            center: "title",
+            right: "dayGridMonth,timeGridWeek",
+          }}
+        />
+      </div>
+
       {showModel && (
-        <div style={overlayStyle}>
-          <div style={modalStyle}>
-            <h3>Select Day Type</h3>
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
+          <div className="bg-gray-950 text-white p-6 rounded-2xl w-[90%] max-w-sm flex flex-col gap-4 shadow-xl">
+
+            <h3 className="text-lg font-semibold text-center">
+              Select Day Type
+            </h3>
 
             {message && (
-              <p style={{color:"#dd4d4f" , fontSize:"15px"}}>
+              <p className="text-red-400 text-sm text-center">
                 {message}
               </p>
             )}
 
-            <button onClick={() => addEvent("workout")} style={workoutBtn}>Workout 💪</button>
-            <button onClick={() => addEvent("rest")} style={restBtn}>Rest 💤</button>
-            <button onClick={() => setShowModel(false)}>Cancel</button>
+            <div className="flex gap-3">
+              <button
+                onClick={() => addEvent("workout")}
+                className="flex-1 py-2 rounded-lg bg-[#aadd00] text-black font-bold hover:scale-105 transition"
+              >
+                Workout 💪
+              </button>
+
+              <button
+                onClick={() => addEvent("rest")}
+                className="flex-1 py-2 rounded-lg bg-gray-700 text-white font-bold hover:scale-105 transition"
+              >
+                Rest 💤
+              </button>
+            </div>
+
+            <button
+              onClick={() => setShowModel(false)}
+              className="text-sm text-white/50 hover:text-white transition"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       )}
     </div>
   );
 }
-
-  const overlayStyle = {
-  position: "fixed",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  backgroundColor: "rgba(0,0,0,0.6)",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  zIndex:"9999"
-};
-
-const modalStyle = {
-  background: "#030712",
-  padding: "20px",
-  borderRadius: "10px",
-  display: "flex",
-  flexDirection: "column",
-  gap: "10px",
-  minWidth: "250px",
-  color: "white",
-};
-
-const workoutBtn = {
-  padding: "8px",
-  background: "#aadd00",
-  color: "white",
-  fontWeight:"bold",
-  border: "none",
-  borderRadius: "6px",
-  cursor: "pointer",
-};
-
-const restBtn = {
-  padding: "8px",
-  background: "rgba(33,150,243,0.4)",
-  color: "white",
-  fontWeight:"bold",
-  border: "none",
-  borderRadius: "6px",
-  cursor: "pointer",
-};

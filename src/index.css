@@ -57,6 +57,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 } */
 
+/* ============================= */
+/* Full Calender Css */
+/* ============================= */
+
 .fc{
   color: #030712;
   font-weight: 600;
@@ -201,6 +205,80 @@ button:focus-visible {
 .fc-timeGridDay-view .fc-day-today {
   background-color: rgba(170,221,0,0.15) !important;
 }
+
+
+.fc-toolbar {
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.fc-toolbar-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.fc-button-group {
+  gap: 6px;
+}
+
+
+.fc-button {
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  font-size: 13px !important;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .fc-toolbar-title {
+    font-size: 16px;
+  }
+
+  .fc-button {
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .fc-toolbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+
+  .fc-toolbar-chunk {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+
+  .fc-toolbar-title {
+    font-size: 14px;
+    text-align: center;
+  }
+
+
+  .fc-button {
+    padding: 4px 8px !important;
+    font-size: 11px !important;
+  }
+
+}
+
+/* ============================= */
+/* Full Calender Css */
+/* ============================= */
 
 
 
