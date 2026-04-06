@@ -10,12 +10,12 @@ export default function DangerZone() {
         These actions are irreversible. Please be careful.
       </p>
 
-      <div className="flex gap-3">
-        <button className="px-4 py-2 bg-red-600 text-white rounded cursor-pointer border transition-all duration-200 hover:bg-red-900 hover:text-red-600 hover:border-red-600 ">
+      <div className="flex flex-col sm:flex-row gap-3">
+        <button className="px-4 py-2 bg-red-600 text-white rounded cursor-pointer border font-bold transition-all duration-200 hover:bg-red-900 hover:text-red-600 hover:border-red-600 hover:scale-105">
           Delete Account
         </button>
 
-        <button className="px-4 py-2 border border-red-600 text-red-600 rounded cursor-pointer transition-all duration-200 hover:bg-red-800 hover:text-white">
+        <button className="px-4 py-2 border border-red-600 text-red-600 rounded cursor-pointer transition-all duration-200 hover:bg-red-800 hover:text-white hover:scale-105">
           Logout
         </button>
       </div>
