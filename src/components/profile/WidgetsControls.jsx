@@ -7,16 +7,14 @@ export default function WorkoutControls() {
   const options = ["All", "In Progress", "Not Started", "Completed"];
 
   return (
-    <div className="flex justify-between items-center mb-6">
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6 gap-3 sm:gap-0">
 
-
-      <div className="relative">
-
-        
+      {/* Status Dropdown */}
+      <div className="relative w-full sm:w-40">
         <button
           onClick={() => setOpen(!open)}
           className="
-            w-40
+            w-full
             px-4 py-2.5 
             text-gray-950 
             font-semibold text-lg 
@@ -29,7 +27,6 @@ export default function WorkoutControls() {
           {status}
         </button>
 
-        
         {open && (
           <div className="
             absolute mt-2 w-full 
@@ -61,13 +58,10 @@ export default function WorkoutControls() {
             ))}
           </div>
         )}
-
       </div>
 
-
-      <div className="flex gap-3">
-
-
+      {/* Action Buttons */}
+      <div className="flex gap-3 justify-start sm:justify-end flex-wrap">
         <button className="relative group w-12 h-12 flex items-center justify-center border-2 rounded-full border-gray-950 transition-all duration-200 hover:border-blue-500">
           <img
             src="/assets/add.png"
@@ -80,7 +74,6 @@ export default function WorkoutControls() {
             className="w-6 h-6 absolute opacity-0 transition-all duration-200 group-hover:opacity-100"
           />
         </button>
-
 
         <button className="relative group w-12 h-12 flex items-center justify-center border-2 rounded-full border-gray-950 transition-all duration-200 hover:border-amber-400">
           <img
@@ -95,7 +88,6 @@ export default function WorkoutControls() {
           />
         </button>
 
-
         <button className="relative group w-12 h-12 flex items-center justify-center border-2 rounded-full border-gray-950 transition-all duration-200 hover:border-red-500">
           <img
             src="/assets/heart-fill.png"
@@ -108,9 +100,7 @@ export default function WorkoutControls() {
             className="w-6 h-6 absolute opacity-0 transition-all duration-200 group-hover:opacity-100"
           />
         </button>
-
       </div>
-
 
     </div>
   );

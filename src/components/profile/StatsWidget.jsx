@@ -7,18 +7,15 @@ export default function StatsWidget() {
 
     useEffect(() => {
       let startTime = null;
-
       const animate = (time) => {
         if (!startTime) startTime = time;
         const progress = time - startTime;
         const value = Math.min((progress / duration) * end, end);
         setCount(Math.floor(value));
-
         if (progress < duration) {
           requestAnimationFrame(animate);
         }
       };
-
       requestAnimationFrame(animate);
     }, [end, duration]);
 
@@ -56,7 +53,7 @@ export default function StatsWidget() {
   });
 
   return (
-    <div className="grid grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
       {widgets.map((widget) => {
         const count = useCountUp(widget.value);
 
@@ -65,14 +62,15 @@ export default function StatsWidget() {
             key={widget.title}
             className={`relative overflow-hidden rounded-2xl p-px bg-linear-to-r ${widget.gradient}`}
           >
-            <div className="bg-gray-950 rounded-2xl p-6 h-full flex flex-col justify-between">
+            <div className="bg-gray-950 rounded-2xl p-4 sm:p-6 h-full flex flex-col justify-between">
 
               <div className="flex items-center justify-between">
-                <div className={`inline-block justify-between p-px rounded-lg bg-linear-to-r ${widget.gradient} mb-4 w-fit`}>
-                  <p className={`text-xs font-medium px-2 py-1 rounded-lg bg-gray-950 ${widget.text}`}>
+                <div className={`inline-block justify-between p-px rounded-lg bg-linear-to-r ${widget.gradient} mb-2 sm:mb-4 w-fit`}>
+                  <p className={`text-xs sm:text-sm font-medium px-2 py-1 rounded-lg bg-gray-950 ${widget.text}`}>
                     {today}
                   </p>
                 </div>
+
                 <div className="relative group w-6 h-9">
                   <div className="absolute inset-0 flex items-center justify-center border-2 rounded-4xl cursor-pointer transition-all duration-200 group-hover:bg-[#aadd00]">
                     <img src="/assets/Dotted-Settings.png" alt="Widget Settings" className="w-4 h-6 absolute transition-all duration-200 group-hover:opacity-0" />
@@ -88,18 +86,18 @@ export default function StatsWidget() {
               <div className="relative mt-2">
 
                 <div className="absolute inset-0 blur-xl opacity-30">
-                  <p className={`text-5xl font-black ${widget.text}`}>
+                  <p className={`text-4xl sm:text-5xl font-black ${widget.text}`}>
                     {count.toLocaleString()}
                   </p>
                 </div>
 
                 <div className="relative flex items-end gap-1">
-                  <p className={`text-5xl font-black tracking-tight bg-linear-to-r ${widget.gradient} bg-clip-text text-transparent`}>
+                  <p className={`text-4xl sm:text-5xl font-black tracking-tight bg-linear-to-r ${widget.gradient} bg-clip-text text-transparent`}>
                     {count.toLocaleString()}
                   </p>
 
                   {widget.suffix && (
-                    <span className="text-sm text-white/60 mb-1">
+                    <span className="text-xs sm:text-sm text-white/60 mb-1">
                       {widget.suffix}
                     </span>
                   )}
@@ -107,7 +105,7 @@ export default function StatsWidget() {
 
               </div>
 
-              <div className={`mt-4 h-0.5 w-12 rounded-full bg-linear-to-r ${widget.gradient}`}></div>
+              <div className={`mt-3 sm:mt-4 h-0.5 w-12 rounded-full bg-linear-to-r ${widget.gradient}`}></div>
 
             </div>
           </div>

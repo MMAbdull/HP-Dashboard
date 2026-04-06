@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export default function ActivityPanel() {
-
   const [monthIndex, setMonthIndex] = useState(0);
 
   const months = [
@@ -24,21 +23,16 @@ export default function ActivityPanel() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-
-      <div className="bg-gray-950 rounded-2xl p-6 flex flex-col">
-        <div className="flex items-center gap-3">
+      {/* Calendar */}
+      <div className="bg-gray-950 rounded-2xl p-6 flex flex-col w-full">
+        <div className="flex items-center gap-3 mb-3">
           <p className="text-white font-semibold text-2xl">Calendar</p>
           <div className="w-9 h-9 flex items-center justify-center border border-white rounded-full">
-            <img
-              className="w-4 h-4"
-              src="/assets/calendar-outline-w.png"
-              alt="calendar"
-            />
+            <img className="w-4 h-4" src="/assets/calendar-outline-w.png" alt="calendar" />
           </div>
         </div>
-
 
         <div className="flex items-center justify-between mb-5">
           <button
@@ -60,19 +54,15 @@ export default function ActivityPanel() {
           </button>
         </div>
 
-
         <div className="grid grid-cols-7 text-xs text-white/40 mb-3">
           {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day) => (
             <p key={day} className="text-center">{day}</p>
           ))}
         </div>
 
-
         <div className="grid grid-cols-7 gap-2">
-
           {[...Array(30)].map((_, i) => {
             const day = i + 1;
-
             const isCompleted = completedDays.includes(day);
             const isRest = restDays.includes(day);
 
@@ -86,48 +76,27 @@ export default function ActivityPanel() {
                   ${!isCompleted && !isRest && "bg-white/5 text-white/50 hover:bg-white/10"}
                 `}
               >
-
-                {!isCompleted && !isRest && (
-                  <span className="absolute bottom-1 left-2 text-xs">
-                    {day}
-                  </span>
-                )}
-
-                {(isCompleted || isRest) && (
-                  <span className="text-lg">
-                    {day}
-                  </span>
-                )}
-
+                {!isCompleted && !isRest && <span className="absolute bottom-1 left-2 text-xs">{day}</span>}
+                {(isCompleted || isRest) && <span className="text-lg">{day}</span>}
               </div>
             );
           })}
-
         </div>
-
       </div>
 
-
-      <div className="bg-gray-950 rounded-2xl p-6 flex flex-col h-full">
-
-
+      {/* Inbox */}
+      <div className="bg-gray-950 rounded-2xl p-6 flex flex-col w-full h-full">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
-          <p className="text-white font-semibold text-2xl">Inbox</p>
-          <div className="w-9 h-9 flex items-center justify-center border border-white rounded-full">
-            <img
-              className="w-4 h-4"
-              src="/assets/speech-bubble-white.png"
-              alt="calendar"
-            />
+            <p className="text-white font-semibold text-2xl">Inbox</p>
+            <div className="w-9 h-9 flex items-center justify-center border border-white rounded-full">
+              <img className="w-4 h-4" src="/assets/speech-bubble-white.png" alt="calendar" />
+            </div>
           </div>
-        </div>
           <span className="text-xs text-white/50">5 new</span>
         </div>
 
-
-        <div className="space-y-3 overflow-y-auto pr-1">
-
+        <div className="space-y-3 overflow-y-auto pr-1 max-h-87.5 sm:max-h-full">
           {messages.map((msg, i) => (
             <div
               key={i}
@@ -140,18 +109,12 @@ export default function ActivityPanel() {
               />
 
               <div className="flex-1">
-                <p className="text-sm text-white font-medium">
-                  {msg.name}
-                </p>
-                <p className="text-xs text-white/60 truncate">
-                  {msg.message}
-                </p>
+                <p className="text-sm text-white font-medium">{msg.name}</p>
+                <p className="text-xs text-white/60 truncate">{msg.message}</p>
               </div>
             </div>
           ))}
-
         </div>
-
       </div>
 
     </div>

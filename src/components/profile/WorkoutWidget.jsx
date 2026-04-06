@@ -46,14 +46,14 @@ export default function WorkoutCards() {
   });
 
   return (
-    <div className="grid grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
       {workouts.map((workout, i) => (
         <div
           key={i}
-          className={`bg-gray-950 border ${workout.border} rounded-2xl p-6 shadow-lg`}
+          className={`bg-gray-950 border ${workout.border} rounded-2xl p-4 sm:p-6 shadow-lg`}
         >
-          <div className="flex justify-between">
-            <p className={`inline-block text-sm font-semibold p-2 border rounded-xl mb-3 ${workout.border} ${workout.text}`}>
+          <div className="flex justify-between items-start sm:items-center mb-2 sm:mb-3">
+            <p className={`inline-block text-xs sm:text-sm font-semibold p-1 sm:p-2 border rounded-xl ${workout.border} ${workout.text}`}>
               {today}
             </p>
             <div className="relative group w-6 h-9">
@@ -64,35 +64,26 @@ export default function WorkoutCards() {
             </div>
           </div>
 
-          <p className="text-white font-bold text-lg">
-            {workout.name}
-          </p>
+          <p className="text-white font-bold text-lg sm:text-xl">{workout.name}</p>
+          <p className={`text-sm sm:text-base mb-2 ${workout.text}`}>{workout.muscle}</p>
 
-          <p className={`text-sm mb-3 ${workout.text}`}>
-            {workout.muscle}
-          </p>
-
-          <ul className="text-white/80 text-sm mb-4 space-y-1">
+          <ul className="text-white/80 text-xs sm:text-sm mb-3 space-y-1">
             {workout.exercises.map((ex, idx) => (
               <li key={idx}>• {ex}</li>
             ))}
           </ul>
 
-          <div className="flex justify-between items-end mb-2 gap-2">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-2 gap-2">
             <div>
-              <p className="text-white/70 text-sm">
-                {workout.sets} sets • {workout.reps} reps
-              </p>
-              <p className="text-white/70 text-sm">
-                Est. Time: {workout.time}
-              </p>
+              <p className="text-white/70 text-xs sm:text-sm">{workout.sets} sets • {workout.reps} reps</p>
+              <p className="text-white/70 text-xs sm:text-sm">Est. Time: {workout.time}</p>
             </div>
 
-            <div className="flex gap-2">
-              <p className={`text-xs px-2 py-1 rounded-full border ${workout.border} ${workout.text}`}>
+            <div className="flex gap-2 mt-1 sm:mt-0">
+              <p className={`text-xs sm:text-sm px-2 py-1 rounded-full border ${workout.border} ${workout.text}`}>
                 {workout.progress}%
               </p>
-              <p className={`text-xs px-3 py-1 rounded-full border ${workout.border} ${workout.text}`}>
+              <p className={`text-xs sm:text-sm px-3 py-1 rounded-full border ${workout.border} ${workout.text}`}>
                 Progress
               </p>
             </div>
