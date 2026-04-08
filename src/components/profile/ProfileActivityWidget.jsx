@@ -25,7 +25,7 @@ export default function ActivityPanel() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
 
-      {/* Calendar */}
+
       <div className="bg-gray-950 rounded-2xl p-6 flex flex-col w-full">
         <div className="flex items-center gap-3 mb-3">
           <p className="text-white font-semibold text-2xl">Calendar</p>
@@ -84,7 +84,7 @@ export default function ActivityPanel() {
         </div>
       </div>
 
-      {/* Inbox */}
+
       <div className="bg-gray-950 rounded-2xl p-6 flex flex-col w-full h-full">
         <div className="flex justify-between items-center mb-4">
           <div className="flex items-center gap-3">
