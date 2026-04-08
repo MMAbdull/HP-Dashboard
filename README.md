@@ -23,26 +23,26 @@ The long-term vision is to build a full fitness ecosystem that helps users:
 ## 📸 Screenshots
 
 ### 🏠 Home Dashboard
-![Home Dashboard](./screenshots/homedashboard1.png)
+![Home Dashboard](/screenshots/homedashboard1.png)
 
 ### 📊 Analytics
-![Analytics](./screenshots/analytics1.png)
+![Analytics](/screenshots/analytics1.png)
 
 ### 📰 News
-![News](./screenshots/News1.png)
+![News](/screenshots/News1.png)
 
 ### 📅 Scheduler
-![Scheduler](./screenshots/scheduale.png)
+![Scheduler](/screenshots/scheduale.png)
 
 ### 👤 Profile
-![Profile 1](./screenshots/Profie1.png)
-![Profile 2](./screenshots/Profie2.png)
+![Profile 1](/screenshots/Profie1.png)
+![Profile 2](/screenshots/Profie2.png)
 
 ### ⚙️ Settings
-![Settings 1](./screenshots/settings1.png)
-![Settings 2](./screenshots/settings2.png)
-![Settings 3](./screenshots/settings3.png)
-![Settings 4](./screenshots/settings4.png)
+![Settings 1](/screenshots/settings1.png)
+![Settings 2](/screenshots/settings2.png)
+![Settings 3](/screenshots/settings3.png)
+![Settings 4](/screenshots/settings4.png)
 
 ---
 
