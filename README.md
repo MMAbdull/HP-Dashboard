@@ -1,4 +1,4 @@
-# 💪 HP Dashboard
+# HP Dashboard
 
 A modern fitness and health tracking dashboard built with React and Tailwind CSS.
 
